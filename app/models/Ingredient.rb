@@ -15,4 +15,18 @@ class Ingredient
     @@all
   end
 
+  def self.most_common_allergen
+    tally = Hash.new
+    Allergen.all.each do |allergen|
+      if !tally.include?("#{allergen.user}")
+        tally["#{allergen.user}"] = 1
+      else
+        tally["#{allergen.user}"] += 1
+      end
+    end
+    tally.sort_by do |user, count|
+      count
+    end.reverse[0]
+  end
+
 end
