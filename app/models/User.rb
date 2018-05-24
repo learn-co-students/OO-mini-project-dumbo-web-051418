@@ -5,7 +5,7 @@
 ### User#recipes should return all of the recipes this user has recipe cards for
 ### User#add_recipe_card should accept a recipe instance as an argument, as well as a date and rating, and create a new recipe card for this user and the given recipe
 ### User#declare_allergen should accept an ingredient instance as an argument, and create a new allergen instance for this user and the given ingredient
-# User#allergens should return all of the ingredients this user is allergic to
+# ###User#allergens should return all of the ingredients this user is allergic to
 # User#top_three_recipes should return the top three highest rated recipes for this user.
 # User#most_recent_recipe should return the recipe most recently added to the user's cookbook.
 
@@ -53,6 +53,23 @@ class User
       allergen.user == self
     end
   end
+
+    def top_three_recipes
+      sorted_rc = self.recipe_cards.sort_by {|rc| rc.rating}
+      sorted_rc.map do |rc|
+        rc.recipe
+      end.reverse[0..2]
+
+    end
+
+    def most_recent_recipe
+      #should return the recipe most recently added to the user's cookbook
+      sorted_rc = self.recipe_cards.sort_by {|rc| rc.date}
+      sorted_rc.map do |rc|
+        rc.recipe
+      end.reverse[0]
+    end
+
 
 
 
