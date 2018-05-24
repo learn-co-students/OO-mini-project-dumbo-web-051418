@@ -9,6 +9,10 @@ class Allergen
     @@all << self
   end
 
+  def self.is_allergen?(ingredient)
+    self.all.map {|allergen| allergen.ingredient == ingredient}.include? true
+  end
+
   def self.all
     @@all
   end
