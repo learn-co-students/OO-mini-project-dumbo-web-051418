@@ -6,6 +6,8 @@
 # RecipeIngredient#recipe should return the recipe instance
 class RecipeIngredient
 
+  attr_reader :recipe, :ingredient
+
   @@all = []
 
   def initialize (recipe, ingredient)

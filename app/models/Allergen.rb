@@ -4,7 +4,7 @@
 # Allergen.all should return all of the Allergen instances
 class Allergen
 
-  attr_reader :user
+  attr_reader :user, :ingredient
 
   @@all = []
   def initialize(user, ingredient)
