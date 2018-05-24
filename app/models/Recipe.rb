@@ -7,3 +7,20 @@
 # Recipe#ingredients should return all of the ingredients in this recipe
 # Recipe#allergens should return all of the ingredients in this recipe that are allergens
 # Recipe#add_ingredients should take an array of ingredient instances as an argument, and associate each of those ingredients with this recipe
+
+class Recipe
+  attr_reader :name
+
+  @@all = []
+  def initialize(name)
+    @name = name
+
+    @@all << self
+  end
+
+  def self.all
+    @@all
+  end
+
+
+end

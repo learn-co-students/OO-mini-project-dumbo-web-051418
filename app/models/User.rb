@@ -8,3 +8,23 @@
 # User#allergens should return all of the ingredients this user is allergic to
 # User#top_three_recipes should return the top three highest rated recipes for this user.
 # User#most_recent_recipe should return the recipe most recently added to the user's cookbook.
+
+class User
+
+  attr_reader :name
+
+  @@all = []
+
+  def initialize(name)
+    @name = name
+
+    @@all << self
+  end
+
+  def self.all
+    @@all
+  end
+
+
+
+end
