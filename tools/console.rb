@@ -8,12 +8,22 @@ recipe2 = Recipe.new("Steamed Pork")
 
 rc = RecipeCard.new(user, recipe2, 4.5)
 
-in2 = Ingredient.new("flour")
-in1 = Ingredient.new("peas")
-in3 = Ingredient.new("carrots")
+flour = Ingredient.new("flour")
+peas = Ingredient.new("peas")
+carrots = Ingredient.new("carrots")
+chicken = Ingredient.new("chicken")
+pork = Ingredient.new("pork")
+cheese = Ingredient.new("cheese")
+butter = Ingredient.new("butter")
+tomato = Ingredient.new("tomato")
+garlic = Ingredient.new("garlic")
+pepper = Ingredient.new("pepper")
+peanut = Ingredient.new("peanut")
+shrimp = Ingredient.new("shrimp")
 
-recipe.add_ingredients([in1, in2, in3])
+recipe.add_ingredients([peanut, shrimp, pepper])
 
-a = Allergen.new(user2, in2)
+a = Allergen.new(user2, peanut)
+b = Allergen.new(user2,shrimp)
 
 binding.pry
