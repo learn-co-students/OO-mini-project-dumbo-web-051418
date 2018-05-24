@@ -7,20 +7,23 @@
 # RecipeCard#user should return the user to which the entry belongs
 # RecipeCard#recipe should return the recipe to which the entry belongs
 class RecipeCard
-  attr_reader :date, :user, :reader
+  attr_reader :date, :user, :reader, :recipe, :rating
 
   @@all = []
 
-  def initialize(user, recipe, date)
+  def initialize(user, recipe, date, rating)
     @user = user
     @recipe = recipe
     @date = date
+    @rating = rating
     @@all << self
   end
 
   def self.all
     @@all
   end
+
+
 
 
 

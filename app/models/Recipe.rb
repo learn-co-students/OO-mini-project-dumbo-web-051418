@@ -22,5 +22,11 @@ class Recipe
     @@all
   end
 
+  def users
+    Users.all.select do |user|
+      user == self
+    end
+  end
+
 
 end
