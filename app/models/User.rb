@@ -46,10 +46,9 @@ class User
   end
   def most_recent_recipe
     # return the recipe most recently added to the user's cookbook
-    self.recipecards.each do |rc|
-      rc.date.split("-")
-      puts (date[0].to_i),  date[1].to_i, (date[2].to_i )
-    end
+    self.recipecards.sort_by do |rc|
+      rc.date
+    end.last
 
   end
 end

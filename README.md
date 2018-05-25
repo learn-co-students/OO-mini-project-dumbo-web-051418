@@ -40,8 +40,8 @@ should accept an ingredient instance as an argument, and create a new allergen i
 should return all of the ingredients this user is allergic to -->
 <!-- - `User#top_three_recipes`
 should return the top three highest rated recipes for this user. -->
-- `User#most_recent_recipe`
-should return the recipe most recently added to the user's cookbook.
+<!-- - `User#most_recent_recipe`
+should return the recipe most recently added to the user's cookbook. -->
 
 
 
@@ -65,8 +65,8 @@ Build the following methods on the Ingredient class
 
 <!-- - `Ingredient.all`
 should return all of the ingredient instances -->
-- `Ingredient.most_common_allergen`
-should return the ingredient instance that the highest number of users are allergic to
+<!-- - `Ingredient.most_common_allergen` -->
+<!-- should return the ingredient instance that the highest number of users are allergic to -->
 
 
 ### `RecipeIngredient`
