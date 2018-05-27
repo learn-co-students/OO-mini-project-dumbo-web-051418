@@ -29,7 +29,6 @@ class User
 
   def top_three_recipes
     hash = Hash.new(0)
-    hash2= nil
 
     self.recipes.each do |recipe|
       hash[recipe] = recipe.rating
